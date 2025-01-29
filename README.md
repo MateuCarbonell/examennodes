@@ -284,3 +284,63 @@ console.log('¿Contiene tbody?:', tabla.querySelector('tbody') !== null);
 ### **11. Herramientas de desarrollo**
 - **Inspección del DOM**: Usa las herramientas de desarrollador del navegador para inspeccionar y modificar el DOM.
 - **Consola**: Puedes interactuar con el DOM desde la consola usando comandos como **`$0`** para referirte al elemento seleccionado.
+---
+```javascript
+// Obtener el div por su id
+const divById = document.getElementById("miDiv");
+console.log('getElementById:', divById);
+
+// Obtener el primer span usando querySelector
+const firstSpan = document.querySelector("#miDiv .elemento");
+console.log('querySelector:', firstSpan);
+
+// Obtener todos los spans con querySelectorAll
+const allSpans = document.querySelectorAll(".elemento");
+console.log('querySelectorAll:', allSpans);
+
+// Comprobar si un span coincide con el selector
+const spanMatches = firstSpan.matches(".elemento");
+console.log('matches:', spanMatches);
+
+// Buscar el ancestro más cercano con la clase "contenedor"
+const closestDiv = firstSpan.closest(".contenedor");
+console.log('closest:', closestDiv);
+
+// Uso de métodos antiguos
+const spansByTagName = divById.getElementsByTagName("span");
+console.log('getElementsByTagName:', spansByTagName);
+
+const spansByClassName = divById.getElementsByClassName("elemento");
+console.log('getElementsByClassName:', spansByClassName);
+
+```
+### **12. Métodos de búsqueda en el DOM**
+- **`document.getElementById(id)`**: Busca un elemento por su id.
+- **`querySelector(css)`**: Devuelve el **primer elemento** que coincide con el selector CSS.
+- **`querySelectorAll(css)`**: Devuelve **todos los elementos** que coinciden con el selector CSS.
+- **`elem.matches(css)`**: Comprueba si el elemento coincide con el selector CSS.
+- **`elem.closest(css)`**: Busca el **ancestro más cercano** que coincide con el selector CSS.
+- **Métodos antiguos**:
+  - **`getElementsByTagName(tag)`**: Busca elementos por etiqueta.
+  - **`getElementsByClassName(className)`**: Busca elementos por clase.
+  - **`getElementsByName(name)`**: Busca elementos por el atributo `name`.
+
+#### Ejercicio Resuelto
+**Enunciado**: Dado el siguiente código HTML, realiza búsquedas específicas con diferentes métodos del DOM y muestra los resultados en la consola.
+
+Código HTML:
+```html
+<div id="miDiv" class="contenedor">
+  <span class="elemento">Elemento 1</span>
+  <span class="elemento">Elemento 2</span>
+</div>
+
+```
+Resumen rápido para el examen:
+Atributos vs Propiedades: Atributos son lo que está en el HTML, propiedades son lo que está en el DOM.
+Métodos clave: getAttribute, setAttribute, append, remove, cloneNode.
+Propiedades clave: innerHTML, outerHTML, textContent, nodeType, nodeName.
+Navegación: childNodes, children, parentNode, nextSibling, previousSibling.
+Tipos de nodos: Elementos, texto, comentarios, documento.
+Métodos de búsqueda: getElementById, querySelector, querySelectorAll, matches, closest.
+Colecciones: Vivas (getElementsBy*) vs estáticas (querySelectorAll)
