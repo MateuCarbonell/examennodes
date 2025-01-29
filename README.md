@@ -285,6 +285,29 @@ console.log('¿Contiene tbody?:', tabla.querySelector('tbody') !== null);
 - **Inspección del DOM**: Usa las herramientas de desarrollador del navegador para inspeccionar y modificar el DOM.
 - **Consola**: Puedes interactuar con el DOM desde la consola usando comandos como **`$0`** para referirte al elemento seleccionado.
 ---
+
+### **12. Métodos de búsqueda en el DOM**
+- **`document.getElementById(id)`**: Busca un elemento por su id.
+- **`querySelector(css)`**: Devuelve el **primer elemento** que coincide con el selector CSS.
+- **`querySelectorAll(css)`**: Devuelve **todos los elementos** que coinciden con el selector CSS.
+- **`elem.matches(css)`**: Comprueba si el elemento coincide con el selector CSS.
+- **`elem.closest(css)`**: Busca el **ancestro más cercano** que coincide con el selector CSS.
+- **Métodos antiguos**:
+  - **`getElementsByTagName(tag)`**: Busca elementos por etiqueta.
+  - **`getElementsByClassName(className)`**: Busca elementos por clase.
+  - **`getElementsByName(name)`**: Busca elementos por el atributo `name`.
+
+#### Ejercicio Resuelto
+**Enunciado**: Dado el siguiente código HTML, realiza búsquedas específicas con diferentes métodos del DOM y muestra los resultados en la consola.
+
+Código HTML:
+```html
+<div id="miDiv" class="contenedor">
+  <span class="elemento">Elemento 1</span>
+  <span class="elemento">Elemento 2</span>
+</div>
+
+```
 ```javascript
 // Obtener el div por su id
 const divById = document.getElementById("miDiv");
@@ -312,28 +335,6 @@ console.log('getElementsByTagName:', spansByTagName);
 
 const spansByClassName = divById.getElementsByClassName("elemento");
 console.log('getElementsByClassName:', spansByClassName);
-
-```
-### **12. Métodos de búsqueda en el DOM**
-- **`document.getElementById(id)`**: Busca un elemento por su id.
-- **`querySelector(css)`**: Devuelve el **primer elemento** que coincide con el selector CSS.
-- **`querySelectorAll(css)`**: Devuelve **todos los elementos** que coinciden con el selector CSS.
-- **`elem.matches(css)`**: Comprueba si el elemento coincide con el selector CSS.
-- **`elem.closest(css)`**: Busca el **ancestro más cercano** que coincide con el selector CSS.
-- **Métodos antiguos**:
-  - **`getElementsByTagName(tag)`**: Busca elementos por etiqueta.
-  - **`getElementsByClassName(className)`**: Busca elementos por clase.
-  - **`getElementsByName(name)`**: Busca elementos por el atributo `name`.
-
-#### Ejercicio Resuelto
-**Enunciado**: Dado el siguiente código HTML, realiza búsquedas específicas con diferentes métodos del DOM y muestra los resultados en la consola.
-
-Código HTML:
-```html
-<div id="miDiv" class="contenedor">
-  <span class="elemento">Elemento 1</span>
-  <span class="elemento">Elemento 2</span>
-</div>
 
 ```
 ## Resumen rápido para el examen
