@@ -6,7 +6,9 @@
 - **Sincronización**: Cambiar un atributo estándar actualiza la propiedad correspondiente, pero no siempre viceversa (ejemplo: `input.value`).
 
 #### Ejercicio Resuelto
-Dado el siguiente código HTML:
+**Enunciado**: Dado el siguiente código HTML, muestra cómo cambiar el valor del atributo `value` y de la propiedad `value` de un elemento input, y explica la diferencia entre ambos.
+
+Código HTML:
 ```html
 <input id="miInput" type="text" value="Hola">
 ```
@@ -34,6 +36,8 @@ console.log('Propiedad value:', input.value);
 - **`elem.attributes`**: Colección de todos los atributos.
 
 #### Ejercicio Resuelto
+**Enunciado**: Crea un elemento HTML dinámicamente, añade un atributo personalizado, modifícalo, elimínalo y muestra la lista completa de atributos.
+
 Script en JavaScript:
 ```javascript
 // Crear el elemento div
@@ -64,6 +68,8 @@ console.log('Lista de atributos:', div.attributes);
   - `href` en un enlace siempre es una URL completa.
 
 #### Ejercicio Resuelto
+**Enunciado**: Trabaja con las propiedades DOM de un checkbox para marcarlo, cambiar su estilo y verificar si está marcado.
+
 Script en JavaScript:
 ```javascript
 // Referencia al checkbox
@@ -85,6 +91,8 @@ console.log('¿Checkbox marcado?:', checkbox.checked);
 - Para evitar conflictos con futuros estándares, se usan atributos `data-*`, accesibles a través de `elem.dataset`.
 
 #### Ejercicio Resuelto
+**Enunciado**: Usa un elemento con atributos `data-*` para leer y modificar valores personalizados desde JavaScript, y añade un nuevo atributo dinámicamente.
+
 Script en JavaScript:
 ```javascript
 const elemento = document.getElementById('miElemento');
@@ -118,6 +126,8 @@ console.log('Dataset completo:', elemento.dataset);
 - **Clonación de nodos**: **`elem.cloneNode(true)`** clona un nodo y sus hijos.
 
 #### Ejercicio Resuelto
+**Enunciado**: Crea dinámicamente un elemento HTML, modifícalo, reemplázalo por otro, y finalmente elimínalo del DOM.
+
 Script en JavaScript:
 ```javascript
 const contenedor = document.getElementById('contenedor');
@@ -146,6 +156,8 @@ span.remove();
 - **`hidden`**: Oculta el elemento (equivalente a `display: none`).
 
 #### Ejercicio Resuelto
+**Enunciado**: Trabaja con las propiedades de un nodo para obtener su contenido y cambiar su texto interno.
+
 Script en JavaScript:
 ```javascript
 const miDiv = document.getElementById('miDiv');
@@ -173,6 +185,8 @@ miDiv.textContent = 'Nuevo Contenido';
   - **`parentElement`**: Nodo padre que es un elemento.
 
 #### Ejercicio Resuelto
+**Enunciado**: Usa las propiedades de navegación para acceder a los elementos hijos, hermanos y padre de una lista.
+
 Script en JavaScript:
 ```javascript
 const lista = document.getElementById('lista');
@@ -196,6 +210,8 @@ console.log('Nodo padre:', lista.parentElement.tagName);
 - No son arrays, pero se pueden convertir con **`Array.from`**.
 
 #### Ejercicio Resuelto
+**Enunciado**: Accede a los elementos de una lista, conviértelos en un array, recórrelos y añade un nuevo elemento para comprobar la actualización automática.
+
 Script en JavaScript:
 ```javascript
 const lista = document.getElementsByTagName('ul')[0];
@@ -225,6 +241,8 @@ console.log('Número de items:', items.length);
 - **Documento**: El nodo raíz del DOM.
 
 #### Ejercicio Resuelto
+**Enunciado**: Identifica el tipo de un nodo, comprueba si es un comentario y muestra su tipo.
+
 Script en JavaScript:
 ```javascript
 const div = document.querySelector('div');
@@ -246,6 +264,8 @@ if (primerHijo.nodeType === 8) {
 - El navegador corrige automáticamente el HTML mal formado al construir el DOM (ejemplo: añade `<tbody>` en las tablas).
 
 #### Ejercicio Resuelto
+**Enunciado**: Crea dinámicamente una tabla mal formada y verifica cómo el navegador la corrige automáticamente.
+
 Script en JavaScript:
 ```javascript
 // Crear la tabla mal formada
