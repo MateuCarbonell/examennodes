@@ -336,11 +336,47 @@ Código HTML:
 </div>
 
 ```
-Resumen rápido para el examen:
-Atributos vs Propiedades: Atributos son lo que está en el HTML, propiedades son lo que está en el DOM.
-Métodos clave: getAttribute, setAttribute, append, remove, cloneNode.
-Propiedades clave: innerHTML, outerHTML, textContent, nodeType, nodeName.
-Navegación: childNodes, children, parentNode, nextSibling, previousSibling.
-Tipos de nodos: Elementos, texto, comentarios, documento.
-Métodos de búsqueda: getElementById, querySelector, querySelectorAll, matches, closest.
-Colecciones: Vivas (getElementsBy*) vs estáticas (querySelectorAll)
+## Resumen rápido para el examen
+
+### Atributos vs Propiedades
+- **Atributos**: Son lo que está en el **HTML**.
+- **Propiedades**: Son lo que está en el **DOM**.
+
+### Métodos clave
+- `getAttribute`: Obtiene el valor de un atributo.
+- `setAttribute`: Establece el valor de un atributo.
+- `append`: Agrega un nodo como hijo del nodo seleccionado.
+- `remove`: Elimina un nodo del DOM.
+- `cloneNode`: Crea una copia de un nodo.
+
+### Propiedades clave
+- `innerHTML`: Contenido HTML dentro de un elemento.
+- `outerHTML`: Contenido HTML de un elemento incluyendo el propio elemento.
+- `textContent`: Texto dentro de un nodo, excluyendo etiquetas HTML.
+- `nodeType`: Tipo de nodo (ej. elemento, texto, comentario).
+- `nodeName`: Nombre del nodo (etiqueta del elemento).
+
+### Navegación
+- `childNodes`: Obtiene todos los nodos hijos de un nodo.
+- `children`: Obtiene solo los nodos hijos que son elementos.
+- `parentNode`: Obtiene el nodo padre.
+- `nextSibling`: Obtiene el siguiente hermano de un nodo.
+- `previousSibling`: Obtiene el hermano anterior de un nodo.
+
+### Tipos de nodos
+- **Elementos**: Etiquetas HTML como `<div>`, `<p>`, etc.
+- **Texto**: Nodos de texto dentro de un elemento.
+- **Comentarios**: Nodos de comentario en el código HTML.
+- **Documento**: Nodo raíz del documento HTML.
+
+### Métodos de búsqueda
+- `getElementById`: Obtiene un elemento por su ID.
+- `querySelector`: Obtiene el primer elemento que coincide con el selector CSS.
+- `querySelectorAll`: Obtiene todos los elementos que coinciden con el selector CSS.
+- `matches`: Verifica si un nodo coincide con un selector.
+- `closest`: Obtiene el ancestro más cercano que coincide con el selector.
+
+### Colecciones
+- **Vivas** (`getElementsBy*`): Se actualizan dinámicamente al modificar el DOM.
+- **Estáticas** (`querySelectorAll`): Son fijas, no se actualizan automáticamente al cambiar el DOM.
+
