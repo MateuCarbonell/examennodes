@@ -131,6 +131,18 @@
 
 ## 6. Propiedades de los nodos
 - **`nodeType`**: Indica el tipo de nodo (1 para elementos, 3 para texto, 9 para el documento).
+- ```html
+  <script>
+    // vamos a examinar: ¿qué tipo de nodo es elem?
+  alert(elem.nodeType); // 1 => elemento
+
+  // Y el primer hijo es...
+  alert(elem.firstChild.nodeType); // 3 => texto
+
+  // para el objeto de tipo documento, el tipo es 9
+  alert( document.nodeType ); // 9
+  </script>
+  ```
 - **`nodeName` y `tagName`**: Devuelven el nombre de la etiqueta (en mayúsculas en HTML).
 - **`innerHTML`**: Contenido HTML del elemento.
 - **`outerHTML`**: HTML completo del elemento (incluyendo el propio elemento).
