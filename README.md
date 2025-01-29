@@ -312,29 +312,39 @@ Código HTML:
 // Obtener el div por su id
 const divById = document.getElementById("miDiv");
 console.log('getElementById:', divById);
+// Devuelve: <div id="miDiv" class="contenedor">...</div>
 
 // Obtener el primer span usando querySelector
 const firstSpan = document.querySelector("#miDiv .elemento");
 console.log('querySelector:', firstSpan);
+// Devuelve: <span class="elemento">Elemento 1</span>
 
 // Obtener todos los spans con querySelectorAll
 const allSpans = document.querySelectorAll(".elemento");
 console.log('querySelectorAll:', allSpans);
+// Devuelve: NodeList(2) [<span class="elemento">Elemento 1</span>, <span class="elemento">Elemento 2</span>]
 
 // Comprobar si un span coincide con el selector
 const spanMatches = firstSpan.matches(".elemento");
 console.log('matches:', spanMatches);
+// Devuelve: true (porque el primer span tiene la clase "elemento")
 
 // Buscar el ancestro más cercano con la clase "contenedor"
 const closestDiv = firstSpan.closest(".contenedor");
 console.log('closest:', closestDiv);
+// Devuelve: <div id="miDiv" class="contenedor">...</div> (el ancestro más cercano con clase "contenedor")
 
 // Uso de métodos antiguos
 const spansByTagName = divById.getElementsByTagName("span");
 console.log('getElementsByTagName:', spansByTagName);
+// Devuelve: HTMLCollection(2) [<span class="elemento">Elemento 1</span>, <span class="elemento">Elemento 2</span>]
+
+// Devuelve la colección de elementos <span> dentro de #miDiv
 
 const spansByClassName = divById.getElementsByClassName("elemento");
 console.log('getElementsByClassName:', spansByClassName);
+// Devuelve: HTMLCollection(2) [<span class="elemento">Elemento 1</span>, <span class="elemento">Elemento 2</span>]
+// Devuelve la colección de elementos con la clase "elemento" dentro de #miDiv
 
 ```
 ## Resumen rápido para el examen
